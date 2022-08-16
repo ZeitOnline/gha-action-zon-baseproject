@@ -71,7 +71,7 @@ runs:
   steps:
     - name: Retrieve Baseproject Environment Config from Vault
       id: raw-config
-      uses: hashicorp/vault-action@v2.4.0
+      uses: hashicorp/vault-action@v2.4.2
       with:
         url: https://vault.ops.zeit.de
         method: jwt
@@ -142,7 +142,7 @@ runs:
     - name: Export a Vault token
       id: vault-export-token
       if: inputs.vault_export_token == 'true'
-      uses: hashicorp/vault-action@v2.4.0
+      uses: hashicorp/vault-action@v2.4.2
       with:
         url: https://vault.ops.zeit.de
         method: jwt
