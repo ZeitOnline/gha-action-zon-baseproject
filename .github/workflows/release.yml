@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Baseproject
-        uses: ZeitOnline/gh-action-baseproject@$GITHUB_REF
+        uses: ZeitOnline/gh-action-baseproject@${{github.ref}}
         with:
           project_name: github-actions-baseproject-tests
           environment: production
