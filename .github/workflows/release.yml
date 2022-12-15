@@ -7,9 +7,28 @@ on:
 name: Create Release
 
 jobs:
+  test:
+    name: Run tests
+    runs-on: self-hosted
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Baseproject
+        uses: ZeitOnline/gh-action-baseproject@${{ github.ref }}
+        with:
+          project_name: github-actions-baseproject-tests
+          environment: production
+          gke_auth: true
+          gar_docker_auth: true
+      - run: false # always fail
+
   build:
     name: Create Release
     runs-on: ubuntu-latest # run on hosted runner, because it's a public repo
+    needs: test
     permissions:
       contents: write
 
