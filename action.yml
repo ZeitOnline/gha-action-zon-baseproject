@@ -84,6 +84,8 @@ outputs:
   # Static outputs
   gcr_image_registry:
     value: eu.gcr.io/zeitonline-210413
+  gar_image_registry:
+    value: europe-west3-python.pkg.dev/zeitonline-engineering/docker-zon
   python_registry_url:
     value: https://europe-west3-python.pkg.dev/zeitonline-engineering/pypi-zon/
 
