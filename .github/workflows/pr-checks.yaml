@@ -36,7 +36,7 @@ jobs:
       run: kubectl create configmap test-runner-${{ github.run_id }}-${{ github.run_attempt }} --from-literal=foo=bar
 
     - name: '[TEST] Read example value from Vault'
-      uses: hashicorp/vault-action@d1720f055e0635fd932a1d2a48f87a666a57906c # v3
+      uses: hashicorp/vault-action@a1b77a09293a4366e48a5067a86692ac6e94fdc0 # v3
       with:
         url: ${{ steps.baseproject.outputs.vault_addr }}
         token: ${{ steps.baseproject.outputs.vault_token }}
